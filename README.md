@@ -90,3 +90,21 @@ For testing purposes, it's recommended to use PayPal's Sandbox environment, whic
 
 - [PayPal Developer Documentation](https://developer.paypal.com/docs/checkout/)
 - [Blazor Documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/)
+
+# Support the Project
+
+If you find this project helpful, consider supporting its development! Your support helps maintain and improve this learning demo.
+
+## Buy Me a Coffee
+
+Enjoy using the demo? You can show your appreciation by buying me a coffee:
+
+[<i class="bi bi-cup-hot-fill"></i> Buy Me a Coffee](https://coff.ee/Alex_M)
+
+## PayPal
+
+Alternatively, you can contribute via PayPal:
+
+[<i class="bi bi-paypal"></i> PayPal.me](https://paypal.me/MayerAlexAndDer)
+
+Every contribution, no matter how small, makes a difference and is greatly appreciated! Thx!
