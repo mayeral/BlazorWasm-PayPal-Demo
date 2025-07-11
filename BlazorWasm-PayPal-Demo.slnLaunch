@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "AppDev",
+    "Projects": [
+      {
+        "Path": "BlazorWasm-PayPal-Demo-App\\BlazorWasm-PayPal-Demo-App.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "BlazorWasm-PayPal-Demo-Api\\BlazorWasm-PayPal-Demo-Api.csproj",
+        "Action": "Start",
+        "DebugTarget": "BlazorWasm_PayPal_Demo_Api"
+      }
+    ]
+  }
+]

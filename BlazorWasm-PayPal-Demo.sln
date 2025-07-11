@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasm-PayPal-Demo-App", "BlazorWasm-PayPal-Demo-App\BlazorWasm-PayPal-Demo-App.csproj", "{63063792-D6FD-4187-BEBC-6FD981A0B8F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasm-PayPal-Demo-Api", "BlazorWasm-PayPal-Demo-Api\BlazorWasm-PayPal-Demo-Api.csproj", "{684BCA63-31B5-441C-85CA-5206C7BC8305}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{84D27F74-D2BA-6C25-2661-968F101900D9}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63063792-D6FD-4187-BEBC-6FD981A0B8F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63063792-D6FD-4187-BEBC-6FD981A0B8F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63063792-D6FD-4187-BEBC-6FD981A0B8F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63063792-D6FD-4187-BEBC-6FD981A0B8F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{684BCA63-31B5-441C-85CA-5206C7BC8305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{684BCA63-31B5-441C-85CA-5206C7BC8305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{684BCA63-31B5-441C-85CA-5206C7BC8305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{684BCA63-31B5-441C-85CA-5206C7BC8305}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F70D4B8-98E4-4582-929E-9295B326F259}
+	EndGlobalSection
+EndGlobal

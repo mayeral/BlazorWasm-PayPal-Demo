@@ -1,0 +1,153 @@
+﻿@page "/about"
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card shadow">
+                <div class="card-header text-white" style="background-color: #0070ba">
+                    <h3 class="mb-0">About PayPal Demo</h3>
+                </div>
+                <div class="card-body">
+                    <h4 class="mb-3">Overview</h4>
+                    <p class="lead">
+                        This demo showcases PayPal integration with a Blazor WebAssembly application,
+                        demonstrating secure payment processing through a separate API backend.
+                    </p>
+
+                    <div class="alert alert-info mb-4">
+                        <h5><i class="bi bi-info-circle-fill me-2"></i>Architecture</h5>
+                        <p>
+                            This application uses a two-part architecture:
+                        </p>
+                        <ul>
+                            <li><strong>BlazorWasm-PayPal-Demo-App</strong> - Client-side Blazor WebAssembly application</li>
+                            <li><strong>BlazorWasm-PayPal-Demo-Api</strong> - .NET API handling secure PayPal API calls</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="mb-3">Setup Instructions</h4>
+                    <div class="card border-warning mb-4">
+                        <div class="card-header bg-warning text-dark">
+                            <h5 class="mb-0"><i class="bi bi-exclamation-triangle-fill me-2"></i>Configuration Required</h5>
+                        </div>
+                        <div class="card-body">
+                            <ol>
+                                <li class="mb-2">
+                                    <strong>API Configuration:</strong>
+                                    <p>Edit <code>appsettings.json</code> in BlazorWasm-PayPal-Demo-Api:</p>
+                                    <pre class="bg-dark text-light p-3 rounded"><code>"PayPal": {
+                                      "ClientId": "&lt;YOUR-PAYPAL-CLIENT-ID&gt;",
+                                      "ClientSecret": "&lt;YOUR-PAYPAL-CLIENT-SECRET&gt;"
+                                    }</code></pre>
+                                </li>
+                                <li class="mb-2">
+                                    <strong>Client Configuration:</strong>
+                                    <p>Edit <code>wwwroot/appsettings.json</code> in BlazorWasm-PayPal-Demo-App:</p>
+                                    <pre class="bg-dark text-light p-3 rounded"><code>"PayPal": {
+                                      "ClientId": "&lt;YOUR-PAYPAL-CLIENT-ID&gt;"
+                                    }</code></pre>
+                                </li>
+                                <li>
+                                    <strong>Run Both Applications:</strong>
+                                    <p>Use AppDev StartConfiguration to launch both applications.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <h4 class="mb-3">PayPal Checkout Process</h4>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <ol class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-start">
+                                    <span class="badge bg-primary rounded me-3">1</span>
+                                    <div>
+                                        <h5>Create Order</h5>
+                                        <p>When the user clicks the PayPal button, the <code>createOrder</code> function is called to create a payment order through the API.</p>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item d-flex align-items-start">
+                                    <span class="badge bg-primary rounded me-3">2</span>
+                                    <div>
+                                        <h5>PayPal Login</h5>
+                                        <p>The user is redirected to PayPal's login page to authenticate and approve the payment.</p>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item d-flex align-items-start">
+                                    <span class="badge bg-primary rounded me-3">3</span>
+                                    <div>
+                                        <h5>Approve Payment</h5>
+                                        <p>After authenticating, the user approves the payment details, triggering the <code>onApprove</code> callback.</p>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item d-flex align-items-start">
+                                    <span class="badge bg-primary rounded me-3">4</span>
+                                    <div>
+                                        <h5>Capture Order</h5>
+                                        <p>The API backend captures the approved payment, finalizing the transaction.</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <h4 class="mb-3">How It Works</h4>
+                    <p>
+                        The client application uses JavaScript interop to render PayPal buttons and handle user interactions.
+                        When a payment is initiated, the API backend communicates with PayPal servers to create and capture orders,
+                        keeping your PayPal credentials secure.
+                    </p>
+
+                    <div class="card bg-light mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Technical Implementation</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>
+                                    <strong>Client Side:</strong>
+                                    <code>wwwroot/javascript/paypal-integration.js</code> handles PayPal SDK integration
+                                </li>
+                                <li>
+                                    <strong>UI Component:</strong>
+                                    <code>Pages/PayPalDemo.razor</code> implements callback methods:
+                                    <ul>
+                                        <li><code>OnPaymentApproved</code> - Handles successful payments</li>
+                                        <li><code>OnPaymentCancelled</code> - Handles cancelled payments</li>
+                                        <li><code>OnPaymentError</code> - Handles payment errors</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Backend API:</strong>
+                                    Securely communicates with PayPal APIs using client credentials
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-primary">
+                        <h5><i class="bi bi-key-fill me-2"></i>PayPal Developer Account</h5>
+                        <p>
+                            To obtain your Client ID and Client Secret, you need to create a PayPal Developer account at
+                            <a href="[https://developer.paypal.com](https://developer.paypal.com)" target="_blank" class="alert-link">developer.paypal.com</a>
+                            and set up an application.
+                        </p>
+                        <p class="mb-0">
+                            For testing purposes, it's recommended to use PayPal's Sandbox environment, which allows you to
+                            simulate transactions without using real money.
+                        </p>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="/" class="btn btn-primary btn-lg" style="background-color: #0070ba">
+                            <i class="bi bi-credit-card me-2"></i>Try the Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

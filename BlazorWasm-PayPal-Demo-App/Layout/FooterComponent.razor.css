@@ -1,0 +1,17 @@
+.logo {
+    height: 32px;
+    width: auto;
+}
+.home-link {
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.home-link:hover {
+    opacity: 0.75;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}

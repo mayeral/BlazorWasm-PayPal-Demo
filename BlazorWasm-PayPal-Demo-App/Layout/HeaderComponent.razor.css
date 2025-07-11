@@ -1,0 +1,31 @@
+header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.header {
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+
+
+.home-link {
+    color: inherit;
+    transition: color 0.2s;
+}
+
+    .home-link:hover {
+        opacity: 0.75;
+    }
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+}

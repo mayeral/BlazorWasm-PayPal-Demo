@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "BlazorWasm_PayPal_Demo_Api": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7013",
+      "launchBrowser": false
+    }
+  }
+}
