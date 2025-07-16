@@ -2,6 +2,9 @@
 
 This project demonstrates how to integrate PayPal payment processing into a Blazor WebAssembly application using a secure API backend architecture.
 
+
+<a href="https://buymeacoffee.com/alex_m" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 ## Project Structure
 
 The solution consists of two main projects:

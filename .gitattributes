@@ -61,4 +61,5 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
-BlazorWasm-PayPal-Demo-App/Pages/About/* linguist-documentation
+*.html -linguist-detectable
+*.css -linguist-detectable
